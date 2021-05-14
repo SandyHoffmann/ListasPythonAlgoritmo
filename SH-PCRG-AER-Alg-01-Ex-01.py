@@ -1,0 +1,1 @@
+print("Nome Completo: Sandy Hoffmann.\nEndereço: Avenida Brasil, Bairro Rio Morto, Indaial,SC.")
