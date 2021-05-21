@@ -1,1 +1,6 @@
-print("Nome Completo: Sandy Hoffmann.\nEndereço: Avenida Brasil, Bairro Rio Morto, Indaial,SC.")
+#Usando print para que os comandos apareçam no terminal
+print("------------------------------------------------")
+print("|  Nome: Sandy Hoffmann                        |")
+print("|  Endereço: 1074, Avenida Brasil, Rio Morto   |")
+print("|  Indaial, SC                                 |")
+print("------------------------------------------------")
