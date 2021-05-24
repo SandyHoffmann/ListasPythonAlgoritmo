@@ -1,9 +1,9 @@
-#Pedindo largura e profundidade para o usuário
+#Pedindo largura e altura para o usuário
 largura = float(input("Me diga a largura em metros: "))
-profundidade = float(input("Me diga a altura em metros: "))
+altura = float(input("Me diga a altura em metros: "))
 
 #Armazenando o resultado da conta em uma variável
-area = largura*profundidade
+area = largura*altura
 
 #Convertendo para hectares
 hectares = area/10000
