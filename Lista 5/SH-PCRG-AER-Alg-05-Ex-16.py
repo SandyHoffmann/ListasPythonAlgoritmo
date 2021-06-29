@@ -1,6 +1,19 @@
-def x_to(base,string):
+def x_to(base,inteiro):
+    soma_total = 0
+    valor = 0
+    resto = 1
+    listaval = []
     if base!=16:
-        pass
+        valor = inteiro
+        while resto>0:
+            valor = valor//base
+            resto = valor%base
+            if resto:
+                listaval.append(resto)
+            else:
+                listaval.append(valor)
+    return listaval
+
 
 def int2hex(inteiro):
     if inteiro>15 or inteiro<0:
@@ -22,9 +35,9 @@ def int2hex(inteiro):
     return hex
 
 def main():
-    string = input('Me diga um numero para converter: ')
+    inteiro = input('Me diga um numero para converter: ')
     base = int(input('Me diga qual a base: '))
-    print(int2hex(inteiro))
+    print(x_to(base,inteiro))
 
 if __name__ == "__main__":
     main()
