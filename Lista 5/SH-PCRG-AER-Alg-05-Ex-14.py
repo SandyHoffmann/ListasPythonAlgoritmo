@@ -5,7 +5,7 @@ def is_magica(dia,mes,ano):
     if dia*mes == anototal:
         print (f'{dia}, {mes}, {ano}')
 def main():
-    for x in range(1,101):
+    for x in range(100):
         ano = 1900 + x
         for y in range(1,13):
             dias = calendario.dias_mes(y,ano)
