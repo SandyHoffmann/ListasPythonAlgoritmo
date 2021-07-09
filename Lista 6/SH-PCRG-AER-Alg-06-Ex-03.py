@@ -1,14 +1,14 @@
 def remover_extremos(listap,num_valores):
-  listap.sort()
-  lista_ordenada = listap.copy()
-  lista_arrumada = []
+  lista_arrumada = listap.copy()
+  lista_arrumada.sort()
+
   for x in range(num_valores):
-    listap.remove(x)
-    listap.remove(len(listap)-x)
+    del lista_arrumada[0]
+    del lista_arrumada[-1]
 
-  return(listap)
+  return(lista_arrumada)
 
-def teste():
+def main():
   lista = []
   while(True):
     num = int(input("Me dê um numero: "))
@@ -16,8 +16,9 @@ def teste():
       break
     lista.append(num)
   if len(lista)<4:
-    return("Me dê ao menos 4 valores.")
-  print(lista)
+    print("Me dê ao menos 4 valores.")
+    return
   print(f'{remover_extremos(lista, 2)} - {lista}')
 
-teste()
+if __name__ == "__main__":
+    main()
