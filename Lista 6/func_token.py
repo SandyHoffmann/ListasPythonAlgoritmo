@@ -1,4 +1,4 @@
-def token(exprecao):
+def tokenizar(exprecao):
     lista = []
     exprecao.replace(" ", "")
     elemento_ant = ""
@@ -18,23 +18,11 @@ def token(exprecao):
                 lista.append(elemento_ant)
                 lista.append(elemento)
                 elemento_ant = ""
-            elif elemento == "(":
-                lista.append(elemento)
-                elemento_ant = ""
-                
             elif (elemento != ")"):
                 elemento_ant+=elemento
                 print(elemento)
             else:
                 lista.append(elemento_ant)
                 lista.append(elemento)
-        if contador == len(exprecao)-1 and elemento!=")":
-            lista.append(elemento_ant)
+         
     return lista
-def main():
-    exp = input("Me de uma expressão: ")
-    print(token(exp))
-
-    
-if __name__ == "__main__":
-    main()
