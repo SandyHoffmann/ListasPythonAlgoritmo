@@ -1,8 +1,9 @@
 def anagrama(frase1,frase2):
     frase1 = frase1.lower()
     frase2 = frase2.lower()
-    frase1 = frase1.replace(" ","")
-    frase2 = frase2.replace(" ","")
+    for x in [" ",".","?","!",":",";",","]:
+        frase1 = frase1.replace(x,"")
+        frase2 = frase2.replace(x,"")
     frase1dic = transf_dic(frase1)
     frase2dic = transf_dic(frase2)
     print(frase1dic)

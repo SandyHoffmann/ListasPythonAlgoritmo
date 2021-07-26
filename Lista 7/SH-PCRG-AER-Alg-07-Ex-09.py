@@ -1,5 +1,16 @@
 import random
 
+"""
+    Nessa questão decidi fazer as possibilidades de sorteios de duas maneiras:
+        A primeira é usando uma mesma cartela para todos os 1000 sorteios.
+        A segunda é gerando uma cartela aleatória para cada sorteio dos 1000.
+        Comparei os dados dessas duas maneiras e os resultados são bem parecidos (variam igual)
+
+    Espero que esteja de acordo!
+    Sandy
+    
+"""
+
 def gerar_cartela():
     dic = {"B": [],"I": [],"N": [],"G": [],"O": []}
     valor_pos = [[1,15],[16,30],[31,45],[46,60],[61,75]]
@@ -28,9 +39,12 @@ def gerar_cartela():
         dic[key].sort()
     return(dic)
 LISTA = []
-def sorteio():
+def sorteio(tipo_sorteio):
     lista_escolhas = []
-    cartela = gerar_cartela()
+    if tipo_sorteio == 1:
+        cartela = {'B': [2, 7, 10, 13, 14], 'I': [16, 17, 19, 22, 23], 'N': [33, 40, 41, 42, 45], 'G': [49, 52, 54, 58, 59], 'O': [61, 70, 71, 72, 75]}
+    else:
+        cartela = gerar_cartela()
     qt_n_sort = 0
     for x in range(1,76):
         lista_escolhas.append(x)
@@ -85,8 +99,9 @@ def mostrar_cartela(dic):
 
 
 def main():
+    tipo_sorteio = int(input("Digite 1 para sorteio com cartela especifica: \nDigite 2 para sorteio com cartelas aleatórias: "))
     for x in range(1000):
-        sorteio()
+        sorteio(tipo_sorteio)
     minimo = LISTA[0]
     maximo = 0
     soma = 0
@@ -98,6 +113,9 @@ def main():
             minimo = x
     media = soma/1000
     print(f'O max foi {maximo} - O min foi {minimo} - A media foi {media}')
+    if tipo_sorteio == 1:
+        cartela = {'B': [2, 7, 10, 13, 14], 'I': [16, 17, 19, 22, 23], 'N': [33, 40, 41, 42, 45], 'G': [49, 52, 54, 58, 59], 'O': [61, 70, 71, 72, 75]}
+        mostrar_cartela(cartela)
 
 if __name__ == "__main__":
     main()

@@ -22,7 +22,8 @@ def to_morse(frase):
     return(nova_frase_morse)
 
 def main():
-    print(to_morse("Hello, World!"))
-    
+    print(f'Exemplo: Hello, World! - {to_morse("Hello, World!")}')
+    frase = input("Me de uma frase: ")
+    print(to_morse(frase))
 if __name__ == "__main__":
     main()
