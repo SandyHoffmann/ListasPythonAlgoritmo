@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function palindromo(palavra){
+            palavra = palavra.replace(' ','')
+            tam = palavra.length
+            if (palavra == ""){
+                return true
+            }
+            if (palavra[0] == palavra[tam-1]){
+                palavra = palavra.replace(palavra[0],"")
+                if (palavra == ""){
+                    return true
+                }
+            }
+
+            if (palavra.length>1){
+                tam = palavra.length
+                palavra = palavra.replace(palavra[tam-1],"")
+                palindromo(palavra)}
+
+            if (palavra.length<=1) {
+                return true
+            }
+
+            else{
+                if (palavra.length == 2 && palavra[0] == palavra[1]){
+                    return true
+                return false
+                }
+            }
+        }
+        print(palindromo("radar"))
+    </script>
+</body>
+</html>
