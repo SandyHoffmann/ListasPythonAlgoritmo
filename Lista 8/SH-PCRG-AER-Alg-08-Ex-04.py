@@ -1,19 +1,18 @@
-dict = {}
-
+dicionario = {}
 def fibonacci(n):
-	if n in dict:
-		return dict[n]
-    elif n == 1:
+    if n in dicionario:
+        return dicionario[n]
+    if n == 1:
         return (0)
-    elif n == 2:
+    if n == 2:
         return (1)
     else:
         m = (fibonacci(n-1)+fibonacci(n-2))
-		dict[n] = m
+        dicionario[n] = m
         return m
 
 def main():
-    n = int(input("Fatorial de que numero? "))
+    n = int(input("Fibonnacci até que numero? "))
     for x in range(1,n+1):
         print(fibonacci(x))
 

@@ -5,4 +5,4 @@ def raiz_quad(n,estimativa=1):
 		estimativa2 = (estimativa + (n/estimativa))/2
 		return raiz_quad(n,estimativa2)
 
-print(raiz_quad(25))
+print(raiz_quad(64))

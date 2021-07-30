@@ -31,7 +31,7 @@ def run_lenght(lista):
 
 def main():
     print(f'Original = ["A",10,"B",5,"C",1]')
-    print(f'Decodificada = {run_lenght(["A",10,"B",5,"C",2])}')
+    print(f'Decodificada = {run_lenght(["A",10,"B",5,"C",1])}')
 
 if __name__ == "__main__":
     main()
