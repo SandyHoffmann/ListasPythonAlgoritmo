@@ -8,7 +8,7 @@ def fibonacci(n):
         return n
 
 def main():
-    n = int(input("Fatorial de que numero? "))
+    n = int(input("Fibonnacci até que numero? "))
     for x in range(1,n+1):
         print(fibonacci(x))
 

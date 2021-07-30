@@ -1,5 +1,5 @@
 def palindromo(palavra):
-
+    #Colocar validação para simbolos de pontuação e etc
     palavra = palavra.replace(' ','')
 
     if palavra == "":
